@@ -23,36 +23,36 @@ label <- fb %>%
     , concentraciones %in% "15" ~ "darkgreen"
     , concentraciones %in% "25" ~ "#f0c17f"
     , concentraciones %in% "35" ~ "#e0b046"
-    , concentraciones %in% "glifosato" ~ "#ff5aa4"
+    , concentraciones %in% "45" ~ "#ff5aa4"
   )) %>% 
-  label_layout(size = c(5, 2.5)
+  label_layout(size = c(3, 1.7)
                , border_color = "blue"
   ) %>%
   include_barcode(
     value = "qrcode"
-    , size = c(2.5, 2.5)
-    , position = c(1.25, 1.25)
+    , size = c(1.5, 1.5)
+    , position = c(0.8, 0.85)
   ) %>%
   include_text(value = "concentraciones"
-               , position = c(2.5, 1.5)
-               , size = 6
+               , position = c(1.6, 1)
+               , size = 4
                , color = "color" 
                , font = font[2]
                , opts = list(hjust = 0.0, vjust = 0.0)
                ,prefix = "concentraciones: "
   ) %>%
   include_text(value = "variedades"
-               , position = c(2.5, 1)
-               , size = 7
+               , position = c(1.6, 0.75)
+               , size = 4
                , color = "#009966"
                , font = font[3]
                , opts = list(hjust = 0.0, vjust = 0.0)
                , prefix = "variedades: "
   ) %>% 
   include_text(value = "plots"
-               , position = c(4.5, 0.5)
+               , position = c(2.5, 0.4)
                , angle = 0
-               , size = 5
+               , size = 4
                , color = "red"
                , font = font[1]
                , prefix = "Plot: "
